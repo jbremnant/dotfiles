@@ -1,0 +1,16 @@
+# Vim Vundle installation
+
+In vim
+
+```
+:PluginInstall
+```
+
+## YouCompleteMe install
+
+In shell
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer  # use with python2
+```

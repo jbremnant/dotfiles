@@ -1,0 +1,17 @@
+snippet t "testtrigger" b
+blah blah
+endsnippet
+
+snippet date "current yyyymmdd" b
+${2:${1:`date +%Y%m%d`}}
+endsnippet
+
+snippet cppclass "C++ class" b
+// Short Desc: $2
+class ${1:MyClass} {
+public:
+	$1::$1();
+	$1::~$1();
+private:
+};
+endsnippet

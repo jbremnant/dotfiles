@@ -1,4 +1,39 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" run :PluginInstall
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'SirVer/ultisnips'
+Plugin 'ervandew/screen'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+filetype plugin indent on
+
+
+" ===========================================================================
+" UltiSnip
+" 
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+map \s :UltiSnipsEdit<cr>
+" ===========================================================================
+
+" ===========================================================================
+" YCM
+" 
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/ycmd/cpp/ycm/.ycm_extra_conf_jb.py'
+" ===========================================================================
 
 " syntax on
 set selectmode=mouse
@@ -29,8 +64,8 @@ map ,, :w<CR>
 " map <C-n> <Esc>:tabnew<CR>
 map     <C-n>   :tabnew<CR>
 map     <C-e>   :tabe
-map     [       :tabp<CR>
-map     ]       :tabn<CR>
+map     <Tab>   :tabn<CR>
+map     <S-Tab> :tabp<CR>
 map     qq      :call QuitAllTabs()<CR>
 map     <F12>   :nohlsearch<CR>
 
